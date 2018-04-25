@@ -1,10 +1,12 @@
 package messages;
 
+import java.io.StringReader;
 import java.io.StringWriter;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
+import javax.xml.bind.Unmarshaller;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -66,4 +68,15 @@ public class UserMessage {
 		
 		return sw.toString();
 	}
+	
+	public static UserMessage generateObject(String xml) throws JAXBException {
+	    JAXBContext jaxbContext = JAXBContext.newInstance(UserMessage.class);
+	    Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
+
+	    StringReader reader = new StringReader(xml);
+	    UserMessage usermessage = (UserMessage) jaxbUnmarshaller.unmarshal(reader);
+
+
+	    return usermessage;
+	  }
 }
