@@ -51,6 +51,7 @@ public class UserMessage {
 		this.datastructure = datastructure;
 	}
 
+	//deze functie genereert de XML adhv de huidige data: eerst de data toevoegen en dan pas deze functie aanroepen
 	public String generateXML() throws JAXBException {
 		JAXBContext context = JAXBContext.newInstance(this.getClass());
 		Marshaller m = context.createMarshaller();
