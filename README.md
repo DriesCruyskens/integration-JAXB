@@ -1,6 +1,6 @@
 # integration-JAXB
 
-dit is een hulpmiddel voor iedereen om XML aan te maken van data. 
+dit is een hulpmiddel voor iedereen om XML aan te maken van data en omgekeerd. 
 
 Dit voorbeeld bevat alle messageklassen voor een UserMessage, deze kan gekopieerd en aangepast worden voor alle andere messages.
 
