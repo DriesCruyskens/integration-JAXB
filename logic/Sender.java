@@ -37,7 +37,7 @@ public class Sender {
 		Header header = new Header("UserMessage", "desc", "kassa");
 		// datastructure
 		Userstructure userstructure = new Userstructure("UUID", "lastname", "firstname", "phonenumber", "gsmnumber", "email", "address", "company", "type", "payment status", "timestamp");
-		// steek header in message klasse
+		// steek header en datastructure (userstructure) in message klasse
 		UserMessage message = new UserMessage(header, userstructure);
 		// genereer uit de huidige data de XML, de footer met bijhorende checksum wordt automatisch gegenereerd (via Footer Static functie)
 		String xml = message.generateXML();
