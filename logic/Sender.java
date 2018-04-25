@@ -44,12 +44,18 @@ public class Sender {
 		
 		System.out.println(xml);
 		
-		try {
+		//stuur xml naar rabbitMQ
+		/*try {
 			sendMessage(xml);
 		} catch (IOException | TimeoutException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		}*/
+		
+		//XML string terug omzetten naar UserMessage object
+		UserMessage usermessage = UserMessage.generateObject(xml);
+		//print messagetype bij wijze van voorbeeld/test
+		System.out.println(usermessage.getHeader().getMessageType());
 
 	}
 
