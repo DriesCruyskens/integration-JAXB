@@ -33,9 +33,13 @@ public class Sender {
 
 	public static void main(String[] args) throws JAXBException {
 		
+		// maak een header
 		Header header = new Header("UserMessage", "desc", "kassa");
+		// datastructure
 		Userstructure userstructure = new Userstructure("UUID", "lastname", "firstname", "phonenumber", "gsmnumber", "email", "address", "company", "type", "payment status", "timestamp");
+		// steek header in message klasse
 		UserMessage message = new UserMessage(header, userstructure);
+		// genereer uit de huidige data de XML, de footer met bijhorende checksum wordt automatisch gegenereerd (via Footer Static functie)
 		String xml = message.generateXML();
 		
 		System.out.println(xml);
