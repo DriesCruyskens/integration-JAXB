@@ -33,6 +33,7 @@ public class Sender {
 
 	public static void main(String[] args) throws JAXBException {
 		
+		// Data -> XML
 		// maak een header
 		Header header = new Header("UserMessage", "desc", "kassa");
 		// datastructure
@@ -52,7 +53,8 @@ public class Sender {
 			e.printStackTrace();
 		}*/
 		
-		// kijk na welke messagetype de gekregen XML is
+		// XML -> Data
+		// kijk na welke messagetype de gekregen XML is (gebeurt normaal in de receiver)
 		String messageType = null;
 		try {
 			messageType = getMessageType(xml);
