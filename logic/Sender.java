@@ -51,11 +51,6 @@ public class Sender {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}*/
-		
-		//XML string terug omzetten naar UserMessage object
-		UserMessage usermessage = UserMessage.generateObject(xml);
-		//print messagetype bij wijze van voorbeeld/test
-		System.out.println(usermessage.getHeader().getMessageType());
 
 	}
 
