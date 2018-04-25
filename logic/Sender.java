@@ -32,36 +32,6 @@ public class Sender {
     private final static String EXCHANGE_NAME = "rabbitexchange";
 
 	public static void main(String[] args) throws JAXBException {
-		int uid = 0;
-		XmlRpcClient models = null;
-		
-		// voorbeeldcode
-		/*try {
-			uid = Helper.getUID();
-			models = Helper.getModels();
-		} catch (MalformedURLException | XmlRpcException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-		List record = null;
-
-		try {
-			record = Arrays.asList((Object[]) models.execute("execute_kw", Arrays.asList(Helper.db, uid, Helper.password, "pos.order",
-					"search_read", Arrays.asList(Arrays.asList()), new HashMap() {
-						{
-							put("fields", Arrays.asList("partner_id.name", "amount_paid"));
-							put("limit", 5);
-						}
-					})));
-		} catch (XmlRpcException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-		HashMap temp = (HashMap) record.get(1);
-		System.out.println(temp.get("amount_paid"));
-*/
 		
 		Header header = new Header("UserMessage", "desc", "kassa");
 		Userstructure userstructure = new Userstructure("UUID", "lastname", "firstname", "phonenumber", "gsmnumber", "email", "address", "company", "type", "payment status", "timestamp");
