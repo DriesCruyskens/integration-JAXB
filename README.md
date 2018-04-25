@@ -10,6 +10,7 @@ Voor andere Message-klassen aan te maken moeten enkel de UserMessage-klasse en U
 
 Als iemand andere klasse aanmaken kunnen die op deze repository worden toegevoegd voor iedereen om te gebruiken!
 
-benodigdheden: 
+benodigdheden:  
+
 JAXB: https://mvnrepository.com/artifact/javax.xml.bind/jaxb-api/2.3.0  
 Commons codec (voor sha1 checksum): https://mvnrepository.com/artifact/commons-codec/commons-codec/1.10
