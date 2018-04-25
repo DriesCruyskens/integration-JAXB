@@ -51,9 +51,37 @@ public class Sender {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}*/
+		
+		// kijk na welke messagetype de gekregen XML is
+		String messageType = null;
+		try {
+			messageType = getMessageType(xml);
+		} catch (ParserConfigurationException | SAXException | IOException e) {
+			e.printStackTrace();
+		}
+	    	
+		// Map XML naar correct soort message
+		if (messageType.equals("UserMessage")) {
+			UserMessage userMessage = UserMessage.generateObject(xml);
+			System.out.println(userMessage.getHeader().getMessageType());
+		}
 
 	}
 
+	// returned de text die in de node 'messageType' zit, dit moet je weten en nakijken om JAXB zonder fouten naar de juiste klasse te laten mappen.
+	public static String getMessageType(String xml) throws ParserConfigurationException, SAXException, IOException {
+		InputSource is = new InputSource();
+	    is.setCharacterStream(new StringReader(xml));
+	    
+	    DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+	    DocumentBuilder db = dbf.newDocumentBuilder();
+	    
+	    Document doc = db.parse(is);
+	    NodeList nodes = doc.getElementsByTagName("messageType");
+	    String messageType = nodes.item(0).getTextContent();
+		
+	    return messageType;
+	}
 	
 	
 	public static void sendMessage(String message) throws IOException, TimeoutException {
