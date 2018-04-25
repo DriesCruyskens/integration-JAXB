@@ -6,4 +6,4 @@ Dit voorbeeld bevat alle messageklassen voor een UserMessage, deze kan gekopieer
 
 Elke UserMessage bestaat uit een header, userstructure (wordt datastructure) en footer klasse. Deze bevatten op hun beurt de data die in de XML moet terrechtkomen.
 
-Voor andere Messages aan te maken moeten enkel de UserMessage-klasse en UserStructure-klasse worden omgevord. Van klasse 'Footer' & 'Header' blijft er maar 1 bestaan.
+Voor andere Message-klassen aan te maken moeten enkel de UserMessage-klasse en UserStructure-klasse worden gekopieerd en omgevord. Van klasse 'Footer' & 'Header' blijft er maar 1 bestaan.
