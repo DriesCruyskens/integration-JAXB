@@ -1,8 +1,8 @@
 # integration-JAXB
 
-dit is een hulpmiddel voor iedereen om XML aan te maken van data. Om XML om te zette naar data moet er nog toevegoed worden
+dit is een hulpmiddel voor iedereen om XML aan te maken van data. Om XML om te zetten naar data moet er nog toegevoegd worden.
 
-Dit voorbeeld bevat alle messageklassen voor een UserMessage, deze kan gekopieerd en aangepast worden voor alle andere messages
+Dit voorbeeld bevat alle messageklassen voor een UserMessage, deze kan gekopieerd en aangepast worden voor alle andere messages.
 
 Elke UserMessage bestaat uit een header, userstructure (wordt datastructure) en footer klasse. Deze bevatten op hun beurt de data die in de XML moet terrechtkomen.
 
